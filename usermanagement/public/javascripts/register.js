@@ -3,6 +3,13 @@ $(document).ready(function() {
 
     $(".alert").hide();
     $("#btnRegister").on('click', (e) => {
+
+        event.preventDefault();
+
+        if (!(validator.validate("#frmRegister") && validatePassword())) {
+            return;
+        }
+
         alert("register");
         event.preventDefault();
         $(".alert").show();
@@ -21,4 +28,26 @@ $(document).ready(function() {
                     .html('User already exists!!');
             });
     });
+
+
+    function validatePassword() {
+
+        alert($("#password").val());
+
+        if ($("#password").val() !== $("#passwordConfirm").val()) {
+            popover($(".card-header"), "Password and Confirm passwords are not maching.");
+            return false;
+        }
+        return true;
+    }
+
+    function popover(element, message) {
+        element.popover('dispose');
+        element.popover({
+            trigger: 'click',
+            placement: 'bottom',
+            content: message
+        });
+        element.popover('show');
+    }
 });
