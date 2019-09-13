@@ -30,13 +30,13 @@
           <div class="form-group">
             <div class="form-label-group">
               <label for="inputEmail">User Name</label>
-              <input type="text" id="inputUserName" name= "username" class="form-control" placeholder="User Name" required="required">              
+              <input type="text" id="inputUserName" name= "username" class="form-control" maxlength = "30" placeholder="User Name" required="required" data-role="validate" data-content="User Name is required. The Team Name must be a series of alpha-numeric characters only. Maximum length of 30.">
             </div>
           </div>
           <div class="form-group">
             <div class="form-label-group">
               <label for="inputEmail">Email address</label>
-              <input type="email" id="inputEmail" name= "email" class="form-control" placeholder="Email address" required="required">              
+              <input type="email" id="email" name= "email" class="form-control" placeholder="Email address" required="required" data-role="validate" data-content="Email is required and should be a valid email id.">              
             </div>
           </div>
           <div class="form-group">
@@ -44,18 +44,18 @@
               <div class="col-md-6">
                 <div class="form-label-group">
                   <label for="inputPassword">Password</label>
-                  <input type="password" id="inputPassword" name= "password" class="form-control" placeholder="Password" required="required">
+                  <input type="password" id="password" name= "password" class="form-control" placeholder="Password" required="required" data-role="validate" data-content="Password is required.">
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-label-group">
                   <label for="confirmPassword">Confirm password</label>                  
-                  <input type="password" id="confirmPassword" class="form-control" placeholder="Confirm password" required="required">                  
+                  <input type="password" id="confirmPassword" class="form-control" placeholder="Confirm password" required="required" data-role="validate" data-content="Confirm Password is required.">
                 </div>
               </div>
             </div>
           </div>
-          <a class="btn btn-primary btn-block" id="btnRegister" href="login.html">Register</a>
+          <a class="btn btn-primary btn-block" id="btnRegister" href="/users/register" >Register</a>
         </form>
         <div class="text-center">
           <a class="d-block small mt-3" href="/users/login">Login Page</a>
@@ -69,5 +69,6 @@
 
     {{>scripts}}
     <script src="/javascripts/register.js"></script>
+    <script src="/javascripts/validation.js"></script>
 </body>
 </html>
