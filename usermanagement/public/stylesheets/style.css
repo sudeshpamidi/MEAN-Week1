@@ -362,3 +362,7 @@ table.table td .cancel {
 .card-login {
     max-width: 25rem;
 }
+
+.card-register {
+    max-width: 40rem;
+}
