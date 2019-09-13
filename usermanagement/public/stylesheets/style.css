@@ -358,3 +358,7 @@ table.table td .cancel {
 .card .card-header[data-toggle="collapse"].collapsed::after {
     content: '\f105';
 }
+
+.card-login {
+    max-width: 25rem;
+}
