@@ -1,2 +1,195 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<!doctype html>
+<html lang="en">
+
+<head>
+{{>head}}
+</head>
+
+<body id="page-top">
+
+    <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
+        <a class="navbar-brand mr-1" href="index.html">South Windsor Soccer Club</a>
+        <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <div class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+            &nbsp;
+            <!--place holder for search textbox-->
+        </div>
+
+        <!-- Navbar -->
+        <ul class="navbar-nav ml-auto ml-md-0">
+            <li class="nav-item mx-1">
+                <a class="nav-link active" href="index.html">Home<span class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+    </nav>
+
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <ul class="sidebar navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="leagues.html">
+                    <i class="fas fa-futbol"></i>
+                    <span>Leagues</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="teams.html">
+                    <i class="fas fa-users-cog"></i>
+                    <span>Teams</span></a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-tools"></i>
+                    <span>Admin</span>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+                    <h6 class="dropdown-header">Teams:</h6>
+                    <a class="dropdown-item" href="team.html">Add New Team</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <!-- Place holder for future-->
+                <a class="nav-link" href="#">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Contacts</span></a>
+            </li>
+        </ul>
+
+        <div id="content-wrapper">
+            <div class="container-fluid">
+
+                <div class="jumbotron">
+                    <div class="container text-center">
+                        <h1>South Windsor Soccer Club</h1>
+                        <p class="lead" id="today"> Wed Sep 04 2019</p>
+                        <a class="btn btn-primary btn-md" href="leagues.html" role="button">&nbsp;View Leagues&nbsp;</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-3 col-sm-6 mb-3">
+                        <div class="card text-white bg-primary o-hidden h-100">
+                            <div class="card-body">
+                                <div class="card-body-icon">
+                                    <i class="fas fa-futbol"></i>
+                                </div>
+                                <div class="mr-5" id="leaguecount">5 Leagues!</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6 mb-3">
+                        <div class="card text-white bg-warning o-hidden h-100">
+                            <div class="card-body">
+                                <div class="card-body-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="mr-5" id="teamcount">121 Teams!</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6 mb-3">
+                        <div class="card text-white bg-success o-hidden h-100">
+                            <div class="card-body">
+                                <div class="card-body-icon">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="mr-5" id="playercount">300 Players!</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6 mb-3">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="card text-white bg-danger o-hidden h-100">
+                                    <div class="card-body">
+                                        <div class="card-body-icon">
+                                            <i class="fab fa-font-awesome-flag"></i>
+                                        </div>
+                                        <div class="mr-5">13 Fields!</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card shadow mb-4">
+                            <!-- Card Header - Accordion -->
+                            <a href="#collapseCardExample" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
+                                <h6 class="m-0 font-weight-bold text-primary">Vision</h6>
+                            </a>
+                            <!-- Card Content - Collapse -->
+                            <div class="collapse show" id="collapseCardExample">
+                                <div class="card-body">
+                                    The vision of South Windsor Soccer Club is to be one of the premier youth soccer clubs in Connecticut, as well as Region I, whose players are recognized for their excellence, commitment, and sportsmanship in the game of soccer.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card shadow mb-4">
+                            <!-- Card Header - Accordion -->
+                            <a href="#collapseCard2" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCard2">
+                                <h6 class="m-0 font-weight-bold text-primary">Our Goal</h6>
+                            </a>
+                            <!-- Card Content - Collapse -->
+                            <div class="collapse show" id="collapseCard2">
+                                <div class="card-body">
+                                    Our goal at SWSC is to develop every player to his or her full potential. SWSC teams shall compete in developmental and showcase leagues throughout Connecticut within the Connecticut Club Soccer League (CCSL), as well as participate in highly competitive
+                                    tournaments within New England, the Mid-Atlantic States and nationwide, when invited or earned.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card shadow mb-4">
+                            <!-- Card Header - Accordion -->
+                            <a href="#collapseCard3" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCard3">
+                                <h6 class="m-0 font-weight-bold text-primary">Competitive</h6>
+                            </a>
+                            <!-- Card Content - Collapse -->
+                            <div class="collapse show" id="collapseCard3">
+                                <div class="card-body">
+                                    SWSC sponsors competitive play for its youth players at four different levels of competition. We offer Developmental (U10-U12) Premier (U13-U14) and Showcase (U15-U18) Programs. SWSC is committed to the development of all its' players and to encourage
+                                    them to reach their highest potential.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.container-fluid -->
+
+                <!-- Sticky Footer -->
+                <footer class="sticky-footer">
+                    <div class="container my-auto">
+                        <div class="copyright text-center my-auto">
+                            <span>Copyright © Your Website 2019</span>
+                        </div>
+                    </div>
+                </footer>
+
+            </div>
+            <!-- /.content-wrapper -->
+        </div>
+        <!-- /#wrapper -->
+
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" href="#page-top">
+            <i class="fas fa-angle-up"></i>
+        </a>
+    </div>
+
+
+{{>scripts}}
+
+</body>
+
+</html>
