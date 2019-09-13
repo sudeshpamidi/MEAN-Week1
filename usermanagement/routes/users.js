@@ -22,7 +22,7 @@ router.get('/', function(req, res, next) {
 
 /* GET users listing. */
 router.get('/register', function(req, res, next) {
-        res.send('respond with a resource');
+        res.render('register', { title: 'Register' });
     })
     .post('/register', function(req, res, next) {
         var user = utils.insertUser(req.body.username, req.body.password, req.body.email);
@@ -31,9 +31,6 @@ router.get('/register', function(req, res, next) {
         } else {
             res.status(404).send("Duplicate user");
         }
-
-
     });
-
 
 module.exports = router;
