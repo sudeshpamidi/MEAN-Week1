@@ -21,9 +21,9 @@ $ npm start
 ```
 
 ### Launch App
-Home [http://localhost:3000/](http://localhost:3000/) in your browser
-Register  [http://localhost:3000/users/register](http://localhost:3000/users/register) 
-Leagues  [http://localhost:3000/leagues](http://localhost:3000/leagues) 
+- Home [http://localhost:3000/](http://localhost:3000/) in your browser
+- Register  [http://localhost:3000/users/register](http://localhost:3000/users/register) 
+- Leagues  [http://localhost:3000/leagues](http://localhost:3000/leagues) 
 
 
 ![Express](img/express.png?raw=true "Express")
