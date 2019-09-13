@@ -1,1 +1,1 @@
-[{"username":"FooBar","password":"password123","email":"123@email.com"},{"username":"Randi","password":"randi123","email":"Randi@email.com"}]
+[{ "username": "FooBar", "password": "password123", "email": "123@email.com" }, { "username": "Randi", "password": "randi123", "email": "Randi@email.com" }]
