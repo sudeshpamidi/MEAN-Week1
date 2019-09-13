@@ -8,7 +8,13 @@ router.get('/', function(req, res, next) {
         res.render('leagues', { title: 'Leagues' });
     })
     .get('/data', function(req, res, next) {
-        res.send(JSON.parse(fs.readFileSync('./data/leagues.json')));
+        var username = req.session.username;
+        if (username) {
+            res.send(JSON.parse(fs.readFileSync('./data/leagues.json')));
+        } else {
+            console.log("Home");
+            res.redirect('/');
+        }
     });
 
 module.exports = router;

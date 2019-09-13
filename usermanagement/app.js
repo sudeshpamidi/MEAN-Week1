@@ -1,5 +1,6 @@
 var createError = require('http-errors');
 var express = require('express');
+var session = require('express-session');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
@@ -18,6 +19,12 @@ app.use(function(req, res, next) {
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
     next();
 });
+
+app.use(session({
+    secret: "hikealog",
+    resave: "true",
+    saveUninitialized: "true"
+}));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

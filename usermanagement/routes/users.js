@@ -1,8 +1,10 @@
 var express = require('express');
+
 var router = express.Router();
 var fs = require('fs');
 
 var utils = require("../utils/util");
+var log = require('log-util');
 
 
 /* GET login pages. */
@@ -15,9 +17,15 @@ router.get('/', function(req, res, next) {
     .post('/login', function(req, res, next) {
         var auth = utils.authorize(req.body.username, req.body.password)
         if (auth) {
-            res.status(200).send('Success');
-        } else
+            // put username in session - validate on Blog page
+            req.session.username = req.body.username;
+            res.redirect('/');
+        } else {
+            //next(new Error('LoginFailedError', false));
             res.status(404).send("Fail");
+        }
+
+
     });
 
 /* GET users listing. */
