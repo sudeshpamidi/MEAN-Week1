@@ -366,3 +366,8 @@ table.table td .cancel {
 .card-register {
     max-width: 40rem;
 }
+
+.dropdown-menu-right {
+    right: 0;
+    left: auto;
+}

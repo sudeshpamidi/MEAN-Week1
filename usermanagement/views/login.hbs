@@ -5,8 +5,21 @@
 {{>head}}
 </head>
 
-<body class="bg-dark">
-  <div class="container">
+
+<body id="page-top">
+    {{>navbar}}
+    <div id="wrapper">
+        {{>sidebar}}
+
+        <div id="content-wrapper">
+            <div class="container-fluid">
+
+
+{{!-- <body class="bg-dark">
+  <div class="container"> --}}
+
+
+
     <div class="card card-login mx-auto mt-5">
       <div class="card-header">Login</div>
       <div class="card-body">
@@ -41,8 +54,11 @@
         </div>
       </div>
     </div>
-  </div>
+  {{!-- </div> --}}
 
+    </div>
+    </div>
+    </div>
     {{>scripts}}
     <script src="/javascripts/login.js"></script>
 </body>
