@@ -5,15 +5,20 @@ var router = express.Router();
 
 /* GET leagues data */
 router.get('/', function(req, res, next) {
-        res.render('leagues', { title: 'Leagues' });
+        var username = req.session.username;
+        if (username) {
+            res.render('leagues', { title: 'Leagues', username: username });
+        } else {
+            res.render('index', { title: 'home', username: username });
+        }
+
     })
     .get('/data', function(req, res, next) {
         var username = req.session.username;
         if (username) {
             res.send(JSON.parse(fs.readFileSync('./data/leagues.json')));
         } else {
-            console.log("Home");
-            res.redirect('/');
+            res.render('index', { title: 'home', username: username });
         }
     });
 
