@@ -55,13 +55,12 @@ $(document).ready(function() {
      */
     function getTeams(league) {
 
-        let url = "/teams/byleague/" + league; //need to do
+        let url = "/teams/data/byleague/" + league; //need to do
         if (league == "all") {
             url = "/teams/data";
         };
 
         $.getJSON(url, function(teams) {
-            console.log(teams);
             populateHeader();
             populateTable(teams)
         });
