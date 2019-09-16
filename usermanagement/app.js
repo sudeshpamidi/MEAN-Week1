@@ -6,8 +6,8 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var hbs = require('hbs');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var indexRouter = require('./routes/index_route');
+var usersRouter = require('./routes/users_route');
 var leaguesRouter = require('./routes/leagues_route');
 var teamsRouter = require('./routes/teams_route');
 
