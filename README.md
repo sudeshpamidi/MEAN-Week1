@@ -1,7 +1,7 @@
 # MEAN-Week1
 MEAN application using express generator.
 
-![SoccerClub](./public/images/soccerclub.jpg "SoccerClub")
+![SoccerClub](usermanagement/public/images/soccerclub.jpg "SoccerClub")
 
 ## Install Express generator Module
 ```
