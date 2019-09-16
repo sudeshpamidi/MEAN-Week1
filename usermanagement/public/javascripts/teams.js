@@ -3,7 +3,7 @@ $(document).ready(function() {
     let urlParams = new URLSearchParams(location.search);
     let leagueCode = urlParams.get("leaguecode");
 
-    //fillDropDown($("#leagues"));
+    fillDropDown($("#leagues"));
 
     if (leagueCode != "" && leagueCode != null) {
         getTeams(leagueCode);
@@ -38,7 +38,7 @@ $(document).ready(function() {
      * @param {*} obj       -- javascript object
      */
     function fillDropDown(dropdown) {
-        let url = "/api/leagues";
+        let url = "/leagues/data";
         $.getJSON(url, function(leagues) {
             leagues.forEach(function(e) {
                 let option = new $("<option>", { value: e.Code, text: e.Name })
@@ -55,7 +55,7 @@ $(document).ready(function() {
      */
     function getTeams(league) {
 
-        let url = "/teams/byleague/" + league;
+        let url = "/teams/byleague/" + league; //need to do
         if (league == "all") {
             url = "/teams/data";
         };
