@@ -3,6 +3,9 @@ $(document).ready(function() {
     $(".alert").hide();
     $("#btnLogin").on('click', (e) => {
         event.preventDefault();
+        if (!validator.validate("#frmLogin")) {
+            return;
+        }
         $(".alert").show();
         let postData = $("#frmLogin").serialize();
         $.post("/users/login", postData, () => {

@@ -6,7 +6,7 @@ var validationUtility = function() {
 
     elements.popover({
         trigger: 'focus',
-        placement: 'right' //,
+        placement: 'bottom' //,
             //content: "messge."
     });
 

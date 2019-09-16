@@ -2,73 +2,74 @@
 <html lang="en">
 
 <head>
-{{>head}}
+  {{>head}}
 </head>
 
-<body class="bg-dark">
-  <div class="container">
-    <div class="card card-register mx-auto mt-5">
-      <div class="card-header">Register an Account</div>
-      <div class="card-body">
-        <form id ="frmRegister">
-          {{!-- <div class="form-group">
-            <div class="form-row">
-              <div class="col-md-6">
+<body id="page-top">
+  {{>navbar}}
+  <div id="wrapper">
+    {{>sidebar}}
+
+    <div id="content-wrapper">
+      <div class="container-fluid">
+
+        <div class="card card-register mx-auto mt-5">
+          <div class="card-header">Register an Account</div>
+          <div class="card-body">
+            <form id="frmRegister">
+              <div class="form-group">
                 <div class="form-label-group">
-                  <input type="text" id="firstName" class="form-control" placeholder="First name" required="required" autofocus="autofocus">
-                  <label for="firstName">First name</label>
+                  <label for="inputEmail">User Name</label>
+                  <input type="text" id="inputUserName" name="username" class="form-control" maxlength="30"
+                    placeholder="User Name" required="required" data-role="validate"
+                    data-content="User Name is required. The Team Name must be a series of alpha-numeric characters only. Maximum length of 30.">
                 </div>
               </div>
-              <div class="col-md-6">
+              <div class="form-group">
                 <div class="form-label-group">
-                  <input type="text" id="lastName" class="form-control" placeholder="Last name" required="required">
-                  <label for="lastName">Last name</label>
+                  <label for="inputEmail">Email address</label>
+                  <input type="email" id="email" name="email" class="form-control" placeholder="Email address"
+                    required="required" data-role="validate"
+                    data-content="Email is required and should be a valid email id.">
                 </div>
               </div>
+              <div class="form-group">
+                <div class="form-row">
+                  <div class="col-md-6">
+                    <div class="form-label-group">
+                      <label for="inputPassword">Password</label>
+                      <input type="password" id="password" name="password" class="form-control" placeholder="Password"
+                        required="required" data-role="validate" data-content="Password is required.">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-label-group">
+                      <label for="confirmPassword">Confirm password</label>
+                      <input type="password" id="confirmPassword" class="form-control" placeholder="Confirm password"
+                        required="required" data-role="validate" data-content="Confirm Password is required.">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a class="btn btn-primary btn-block" id="btnRegister" href="/users/register">Register</a>
+            </form>
+            <div class="text-center">
+              <a class="d-block small mt-3" href="/users/login">Login Page</a>
+              {{!-- This is place holder for forget password 
+              <a class="d-block small" href="forgot-password.html">Forgot Password?</a> --}}
             </div>
-          </div> --}}
-          <div class="form-group">
-            <div class="form-label-group">
-              <label for="inputEmail">User Name</label>
-              <input type="text" id="inputUserName" name= "username" class="form-control" maxlength = "30" placeholder="User Name" required="required" data-role="validate" data-content="User Name is required. The Team Name must be a series of alpha-numeric characters only. Maximum length of 30.">
+            <div class="alert text-center">
             </div>
           </div>
-          <div class="form-group">
-            <div class="form-label-group">
-              <label for="inputEmail">Email address</label>
-              <input type="email" id="email" name= "email" class="form-control" placeholder="Email address" required="required" data-role="validate" data-content="Email is required and should be a valid email id.">              
-            </div>
-          </div>
-          <div class="form-group">
-            <div class="form-row">
-              <div class="col-md-6">
-                <div class="form-label-group">
-                  <label for="inputPassword">Password</label>
-                  <input type="password" id="password" name= "password" class="form-control" placeholder="Password" required="required" data-role="validate" data-content="Password is required.">
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="form-label-group">
-                  <label for="confirmPassword">Confirm password</label>                  
-                  <input type="password" id="confirmPassword" class="form-control" placeholder="Confirm password" required="required" data-role="validate" data-content="Confirm Password is required.">
-                </div>
-              </div>
-            </div>
-          </div>
-          <a class="btn btn-primary btn-block" id="btnRegister" href="/users/register" >Register</a>
-        </form>
-        <div class="text-center">
-          <a class="d-block small mt-3" href="/users/login">Login Page</a>
-          {{!-- <a class="d-block small" href="forgot-password.html">Forgot Password?</a> --}}
         </div>
-        <div class="alert text-center">                      
-        </div>
+
       </div>
     </div>
   </div>
 
-    {{>scripts}}
-    <script src="/javascripts/register.js"></script>
-    <script src="/javascripts/validation.js"></script>
+  {{>scripts}}
+  <script src="/javascripts/register.js"></script>
+  <script src="/javascripts/validation.js"></script>
 </body>
+
 </html>

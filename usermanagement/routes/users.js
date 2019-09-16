@@ -14,6 +14,10 @@ router.get('/', function(req, res, next) {
     .get('/login', function(req, res, next) {
         res.render('login', { title: 'Login' });
     })
+    .get('/logout', (req, res) => {
+        req.session.destroy();
+        res.render('login', { title: 'Login' });
+    })
     .post('/login', function(req, res, next) {
         var auth = utils.authorize(req.body.username, req.body.password)
         if (auth) {

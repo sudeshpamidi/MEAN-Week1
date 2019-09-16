@@ -2,7 +2,7 @@ var fs = require('fs');
 
 var authorize = (username, password) => {
     let auth = false;
-    var user = getUsers().find((o) => o.username === username && o.password === password);
+    var user = getUsers().find((o) => (o.username === username || o.email === username) && o.password === password);
     if (user) {
         auth = true;
     }
