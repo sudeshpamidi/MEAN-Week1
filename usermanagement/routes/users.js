@@ -28,8 +28,6 @@ router.get('/', function(req, res, next) {
             //next(new Error('LoginFailedError', false));
             res.status(404).send("Fail");
         }
-
-
     });
 
 /* GET users listing. */

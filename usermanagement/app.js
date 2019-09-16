@@ -8,7 +8,8 @@ var hbs = require('hbs');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var leaguesRouter = require('./routes/leagues');
+var leaguesRouter = require('./routes/leagues_route');
+var teamsRouter = require('./routes/teams_route');
 
 var app = express();
 
@@ -21,7 +22,7 @@ app.use(function(req, res, next) {
 });
 
 app.use(session({
-    secret: "hikealog",
+    secret: 'soccerclub',
     resave: "true",
     saveUninitialized: "true"
 }));
@@ -40,6 +41,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/leagues', leaguesRouter);
+app.use('/teams', teamsRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
