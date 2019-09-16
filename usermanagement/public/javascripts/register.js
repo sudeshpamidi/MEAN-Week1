@@ -32,9 +32,7 @@ $(document).ready(function() {
 
     function validatePassword() {
 
-        alert($("#password").val());
-
-        if ($("#password").val() !== $("#passwordConfirm").val()) {
+        if ($("#password").val() !== $("#confirmPassword").val()) {
             popover($(".card-header"), "Password and Confirm passwords are not maching.");
             return false;
         }

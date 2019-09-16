@@ -14,6 +14,10 @@ router.get('/', function(req, res, next) {
     .get('/login', function(req, res, next) {
         res.render('login', { title: 'Login' });
     })
+    .get('/logout', (req, res) => {
+        req.session.destroy();
+        res.render('login', { title: 'Login' });
+    })
     .post('/login', function(req, res, next) {
         var auth = utils.authorize(req.body.username, req.body.password)
         if (auth) {
@@ -24,8 +28,6 @@ router.get('/', function(req, res, next) {
             //next(new Error('LoginFailedError', false));
             res.status(404).send("Fail");
         }
-
-
     });
 
 /* GET users listing. */
