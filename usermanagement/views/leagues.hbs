@@ -1,49 +1,23 @@
 <!doctype html>
 <html lang="en">
-
 <head>
 {{>head}}
 </head>
-
 <body id="page-top">
     {{>navbar}}
     <div id="wrapper">
         {{>sidebar}}
-
         <div id="content-wrapper">
             <div class="container-fluid">
-
-                <!-- Icon Cards-->
-                <div class="row" id="iconCards">
-                    <div class="col-sm-9">
-                    </div>
-                </div>
-
-                <!-- /.container-fluid -->
-
-                <!-- Sticky Footer -->
-                <footer class="sticky-footer">
-                    <div class="container my-auto">
-                        <div class="copyright text-center my-auto">
-                            <span>Copyright © Your Website 2019</span>                            
-                            <!-- Scroll to Top Button-->
-                            {{!-- <a class="scroll-to-top rounded" href="#page-top">
-                               <i class="fas fa-angle-up"></i>
-                            </a>  --}}
-                        </div>
-
-                    </div>
-                </footer>
-
+                {{> leagues}}                
+                {{> footer}}
             </div>
             <!-- /.content-wrapper -->
         </div>
         <!-- /#wrapper -->
     </div>
-
 {{>scripts}}
 <script src="/javascripts/leagues.js"></script>
 </body>
-
 </html>
 

@@ -371,3 +371,18 @@ table.table td .cancel {
     right: 0;
     left: auto;
 }
+
+#frmLogin .form-group {
+    position: relative;
+}
+
+#frmLogin .form-group i {
+    position: absolute;
+    left: 15px;
+    top: 11px;
+    font-size: 18px;
+}
+
+#frmLogin .form-group .form-control {
+    padding-left: 40px;
+}
