@@ -1,15 +1,17 @@
+/**
+ * Description: Supporting functions for register pages
+ * Author: Sudesh Pamidi
+ */
+"use strict"
 $(document).ready(function() {
-
 
     $(".alert").hide();
     $("#btnRegister").on('click', (e) => {
-
         event.preventDefault();
 
         if (!(validator.validate("#frmRegister") && validatePassword())) {
             return;
         }
-
         alert("register");
         event.preventDefault();
         $(".alert").show();
@@ -30,8 +32,10 @@ $(document).ready(function() {
     });
 
 
+    /**
+     * validates whether password and confirm password are same
+     */
     function validatePassword() {
-
         if ($("#password").val() !== $("#confirmPassword").val()) {
             popover($(".card-header"), "Password and Confirm passwords are not maching.");
             return false;
@@ -39,6 +43,11 @@ $(document).ready(function() {
         return true;
     }
 
+    /**
+     * Supportin function for popover
+     * @param {*} element 
+     * @param {*} message 
+     */
     function popover(element, message) {
         element.popover('dispose');
         element.popover({

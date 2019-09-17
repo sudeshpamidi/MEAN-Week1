@@ -1,3 +1,8 @@
+/**
+ * Description: Supporting functions for login pages
+ * Author: Sudesh Pamidi
+ */
+"use strict"
 $(document).ready(function() {
 
     var userName = $('#username');
@@ -6,7 +11,6 @@ $(document).ready(function() {
 
     $(".alert").hide();
     $("#btnLogin").on('click', (e) => {
-
         event.preventDefault();
         if (!validator.validate("#frmLogin")) {
             return;
@@ -32,8 +36,9 @@ $(document).ready(function() {
             });
     });
 
-
-
+    /**
+     * Check whether browser local storage supports
+     */
     function localStorargeSupported() {
         if (typeof(Storage) !== "undefined") {
             return true;

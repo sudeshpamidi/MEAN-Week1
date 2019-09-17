@@ -1,3 +1,8 @@
+/**
+ * Description: The script validates the form controls and display the popover message 
+ * for invalid inputs.
+ * Author :Sudesh Pamidi
+ */
 "use strict"
 
 var validationUtility = function() {
